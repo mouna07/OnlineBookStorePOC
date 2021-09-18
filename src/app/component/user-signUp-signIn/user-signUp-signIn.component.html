@@ -1,0 +1,115 @@
+<div class="User_details_form">
+<div class="user-login-form">
+
+  <mat-card class="form-box" >
+    <img src="../../../assets/Login.png" alt="IMAGE not found" class="login-img"/>
+      
+    <div class="letter">
+    <h3 class="letter-size">
+      THE ONLINE BOOK STORE
+    </h3>
+
+    </div>
+
+  </mat-card>
+<mat-card class="login-box" > 
+  <mat-dialog-content class="mat-typography">
+   <div class="login-wrap">
+    <div class="login-html">
+        <div class="tab2"> 
+          
+
+        
+          <mat-tab-group mat-align-tabs="start">
+              <mat-tab label="LOGIN">
+                  <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+                    <div class="sign-up-htm">
+
+
+                    <div class="group">
+                      <mat-form-field appearance="outline">
+                        <input matInput placeholder="Email" [formControl]="email" matInput required />
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                      </mat-form-field>
+                    </div>
+
+                    <div class="group">
+                      <mat-form-field appearance="outline">
+                          <input matInput placeholder="Password" [formControl]="password" [type]="hide ? 'password' : 'text'" minlength="8" required />
+                          <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                          </button>
+                        </mat-form-field>
+                        
+                      </div>
+                      <div class="foot-lnk">
+                        <a href="">Forgot Password?</a>
+                      </div>
+                     
+
+                      <div class="group">
+                        <button mat-raised-button type="submit" [mat-dialog-close]="true"  class="login-button">Login</button>
+                      </div>  
+                      </div>
+                    </form>
+              </mat-tab>
+
+
+
+
+              <mat-tab label="SIGNUP">
+                  <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+
+                  <div class="group">  
+                  <mat-form-field appearance="outline">
+                    <input matInput placeholder="FullName"  [formControl]="fullName" matInput required />
+                    <mat-error *ngIf="fullName.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  </div>
+
+                  <div class="group">
+                  <mat-form-field appearance="outline">
+                    <input matInput placeholder="Email" [formControl]="email" matInput required />
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  </div>     
+
+
+                  <div class="group">
+                  <mat-form-field appearance="outline">
+                      <input matInput placeholder="Password" [formControl]="password" [type]="hide ? 'password' : 'text'" minlength="8" required />
+                      <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </div>
+                  
+
+                  <div class="group">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Phone number</mat-label>
+                      <input matInput placeholder="Placeholder" [formControl]="password" matInput required>
+                      <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                      </mat-form-field>
+                  </div>
+                  
+                  <div class="group">
+                    <button mat-raised-button type="submit" [mat-dialog-close]="true"  class="login-button">Sign Up</button>
+                  </div>  
+                </form>
+              </mat-tab>
+          </mat-tab-group>
+          </div>
+
+    
+
+
+</div>
+</div>
+
+</mat-dialog-content>
+</mat-card>
+</div>
+</div>
