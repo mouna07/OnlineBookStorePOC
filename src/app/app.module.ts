@@ -17,14 +17,17 @@ import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserSignUpLoginComponent
-    
+    UserSignUpLoginComponent,
+    ForgotPasswordComponent
+
+
   ],
   imports: [
     BrowserModule,
@@ -43,12 +46,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-   
-   
-
-  ],
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatToolbarModule
+    ],
   providers: [],
-  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
