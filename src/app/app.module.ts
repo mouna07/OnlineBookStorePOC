@@ -17,15 +17,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-
-
+import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
+import {ResetPasswordComponent} from './component/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserSignUpLoginComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ResetPasswordComponent
 
 
   ],
