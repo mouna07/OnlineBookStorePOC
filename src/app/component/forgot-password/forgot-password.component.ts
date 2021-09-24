@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './forgot-password.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import {UserService}   from '../../services/userservice/user.service';
 
 
 @Component({
@@ -10,6 +11,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ForgotPasswordComponent implements OnInit {
 
+  constructor(private service: UserService,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +26,18 @@ export class ForgotPasswordComponent implements OnInit {
    * @description : It takes the email from user and send an email to the particular user
    * @method      : forgot password from UserService
   */
-
+   submit() {
+    this.service.forgotPassword(this.user).subscribe(response => {
+      console.log(response)
+      this.data = response
+      this.message = this.data.message
+      this.snackBar.open(this.message, '', { duration: 2000 })
+    }, error => {
+      console.log(error)
+      this.error = error
+      this.message = this.error.error.error
+      this.snackBar.open(this.message, '', { duration: 2000 })
+    })
+  }
 
 }

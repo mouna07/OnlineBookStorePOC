@@ -1,0 +1,27 @@
+<div class="main-container" >
+    <header class="toolbar" fxLayout="row" fxLayoutAlign="center center">
+        <div class="containerls" fxFlex=80 fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayoutAlign="space-between center" class = "readLS">
+                <img src="../../../assets/education.svg" alt="" class="image">
+                <span class="text" (click)="change()">BookStore</span>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <input type="text" class="search" placeholder="Search">
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="space-around center" class ="searchLS">
+                <figure fxLayout="row" fxLayoutAlign="center center" class="profilediv" class="figurLS">
+                    <img src="../../../assets/user.svg" alt="profile" (click)="openDialog()" class="profileimg">
+                    <figcaption class="profiletext">Profile</figcaption>
+                </figure>
+
+                <figure fxLayout="row" fxLayoutAlign="center center" class="profilediv">
+                    <img src="../../../assets/supermarket.svg" alt="cart" (click)="route()" class="profileimg">    
+                    <figcaption class="profiletext">Cart</figcaption>
+                </figure>
+            </div>
+            
+        </div>
+    </header>
+</div>

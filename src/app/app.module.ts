@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,14 +20,22 @@ import {MatIconModule} from '@angular/material/icon';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import {ResetPasswordComponent} from './component/reset-password/reset-password.component';
+import { HttpClientModule } from '@angular/common/http';
+import { VerifyUser } from './component/verify-user/verify-user.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { HeaderComponent } from './component/header/header.component';
+import { UserDashboardComponent } from './component/user-dashboard/user-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserSignUpLoginComponent,
     ForgotPasswordComponent,
-    ResetPasswordComponent
-
+    ResetPasswordComponent,
+    VerifyUser,
+    FooterComponent,
+    HeaderComponent,
+    UserDashboardComponent
 
   ],
   imports: [
@@ -51,7 +60,9 @@ import {ResetPasswordComponent} from './component/reset-password/reset-password.
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+
     ],
   providers: [],
 

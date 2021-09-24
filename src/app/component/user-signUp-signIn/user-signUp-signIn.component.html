@@ -17,8 +17,7 @@
    <div class="login-wrap">
     <div class="login-html">
         <div class="tab2"> 
-          
-
+            
         
           <mat-tab-group mat-align-tabs="start">
               <mat-tab label="LOGIN">
@@ -49,7 +48,7 @@
                      
 
                       <div class="group">
-                        <button mat-raised-button type="submit" [mat-dialog-close]="true"  class="login-button">Login</button>
+                        <button mat-raised-button type="submit" [mat-dialog-close]="true"  class="login-button" (click)='login()'>Login</button>
                       </div>  
                       </div>
                     </form>
@@ -90,13 +89,13 @@
                   <div class="group">
                     <mat-form-field appearance="outline">
                       <mat-label>Phone number</mat-label>
-                      <input matInput placeholder="Placeholder" [formControl]="password" matInput required>
-                      <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                      <input matInput placeholder="Placeholder" [formControl]="phoneNo" matInput required>
+                      <mat-error *ngIf="phoneNo.invalid">{{getErrorMessage()}}</mat-error>
                       </mat-form-field>
                   </div>
                   
                   <div class="group">
-                    <button mat-raised-button type="submit" [mat-dialog-close]="true"  class="login-button">Sign Up</button>
+                    <button mat-raised-button type="submit" (click)='register()' [mat-dialog-close]="true"  class="login-button">Sign Up</button>
                   </div>  
                 </form>
               </mat-tab>
